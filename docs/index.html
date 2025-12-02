@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaga Air Monitoring Project</title>
+
+  <!-- Favicon and mobile shortcut -->
+  <link rel="icon" type="image/png" href="kaga-icon.png">
+  <link rel="apple-touch-icon" href="kaga-icon.png">
+  <meta name="theme-color" content="#00c6ff">
+  <meta name="description" content="Kaga Air Monitoring uses AI and sensors to track air pollution and protect health.">
+  <meta name="author" content="The Kaga Team">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    nav {
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #ffd814; }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 20px; max-width: 600px; margin: auto; }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    section h2 { font-size: 28px; margin-bottom: 20px; color: #ffd814; }
+    section p, section ul { font-size: 16px; line-height: 1.6; }
+    ul { list-style: square; padding-left: 20px; }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    img:hover { transform: scale(1.05); }
+    .materials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img { width: 100px; margin-bottom: 10px; border-radius: 8px; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #00ffcc;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover { background: #ffd814; color: #000; }
+    .team, .brand, .contact { text-align: center; margin-top: 20px; }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    .contact input, .contact textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    .contact button {
+      padding: 12px;
+      background: #00ffcc;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact button:hover { background: #ffd814; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="learn-more.html">Learn More</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h1>🌍 Kaga Air Monitoring Project</h1>
+  <p>AI + Sensors for a Cleaner Future. Monitoring air quality to protect health and the planet.</p>
+</div>
+
+<section>
+  <h2>About Earth & Our Project</h2>
+  <p>Earth is our shared home, and clean air is essential for life. Rising pollution levels threaten ecosystems, human health, and climate stability. Our project uses AI to monitor air quality, detect harmful gases, and raise awareness about environmental protection.</p>
+  <img src="earth.jpg" alt="Planet Earth">
+</section>
+
+<section>
+  <h2>How AI is Used</h2>
+  <p>Artificial Intelligence processes sensor data from the MQ-135 gas sensor and ESP32 microcontroller. It learns patterns of air pollution, predicts future trends, and provides real-time alerts through the LED ring and dashboards.</p>
+  <img src="ai-diagram.jpg" alt="AI diagram">
+</section>
+
+<section>
+  <h2>Materials Used</h2>
+  <div class="materials">
+    <div class="card">
+      <img src="esp32.jpg" alt="ESP32 Board">
+      <h3>ESP32 Board</h3>
+      <p>A powerful Wi-Fi and Bluetooth enabled microcontroller used as the brain of the project.</p>
+    </div>
+    <div class="card">
+      <img src="dfplayer.jpg" alt="DFPlayer Mini">
+      <h3>DFPlayer Mini</h3>
+      <p>A small audio module that can play MP3 files from a microSD card, useful for alerts.</p>
+    </div>
+    <div class="card">
+      <img src="arduino.jpg" alt="Arduino UNO">
+      <h3>Arduino UNO</h3>
+      <p>A versatile microcontroller board used for prototyping and controlling sensors and modules.</p>
+    </div>
+    <div class="card">
+      <img src="led-ring.jpg" alt="WS2812 LED Ring">
+      <h3>WS2812 RGB LED Ring</h3>
+      <p>Programmable LEDs that visually display air quality levels with color-coded signals.</p>
+    </div>
+    <div class="card">
+      <img src="mq135.jpg" alt="MQ-135 Gas Sensor">
+      <h3>MQ-135 Gas Sensor</h3>
+      <p>Detects harmful gases such as NH₃, NOx, alcohol, benzene, smoke, and CO₂ equivalents.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How It Helps the World</h2>
+  <ul>
+    <li>Monitors indoor air quality to protect health</li>
+    <li>Detects harmful gases and pollutants</li>
+    <li>Supports smart cities with IoT integration</li>
+    <li>Raises awareness about environmental issues</li>
+    <li>Encourages sustainable living</li>
+  </ul>
+  <img src="city.jpg" alt="Smart city air monitoring">
+</section>
+
+<section>
+  <h2>Use Cases</h2>
+  <p>This project can be used in homes, schools, offices, and hospitals to monitor air quality. It can also be integrated into smart city networks to provide large-scale pollution data.</p>
+  <a class="btn" href="learn-more.html">Learn More</a>
+</section>
+
+<section id="team" class="team">
+  <h2>👨‍💻 The Kaga Team</h2>
+  <p>Developed by <strong>The Kaga Team</strong></p>
+</section>
+
+<section class="brand">
+  🚀 By Kaga Air Monitoring
+  </section
