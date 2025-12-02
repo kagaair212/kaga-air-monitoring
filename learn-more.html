@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn More - Kaga Air Monitoring</title>
+
+  <!-- Favicon and mobile shortcut -->
+  <link rel="icon" type="image/png" href="kaga-icon.png">
+  <link rel="apple-touch-icon" href="kaga-icon.png">
+  <meta name="theme-color" content="#00c6ff">
+  <meta name="description" content="Learn more about the Kaga Air Monitoring project, its AI, materials, and global impact.">
+  <meta name="author" content="The Kaga Team">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #00c6ff, #0072ff, #ff6a00, #ee0979);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    nav {
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #ffd814; }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 { font-size: 42px; margin-bottom: 20px; }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    section h2 { font-size: 28px; margin-bottom: 20px; color: #ffd814; }
+    section p, section ul { font-size: 16px; line-height: 1.6; }
+    ul { list-style: square; padding-left: 20px; }
+    img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      max-width: 100%;
+    }
+    img:hover { transform: scale(1.05); }
+    .small-img { width: 300px; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #00ffcc;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover { background: #ffd814; color: #000; }
+    .team, .brand, .contact { text-align: center; margin-top: 20px; }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    .contact input, .contact textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    .contact button {
+      padding: 12px;
+      background: #00ffcc;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact button:hover { background: #ffd814; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="learn-more.html">Learn More</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>📘 Learn More About Kaga Air Monitoring</h1>
+  <p>Dive deeper into the AI, materials, and vision behind our project.</p>
+</header>
+
+<section>
+  <h2>AI in Action</h2>
+  <p>
+    Our system uses machine learning to analyze sensor data, detect pollution spikes, and predict
+    future air quality trends. This helps communities prepare and respond faster.
+  </p>
+  <img src="ai-graph.jpg" alt="AI analyzing air data">
+</section>
+
+<section>
+  <h2>Materials Deep Dive</h2>
+  <ul>
+    <li><strong>ESP32 Board:</strong> Dual-core processor with Wi-Fi and Bluetooth, enabling smart dashboards.</li>
+    <li><strong>DFPlayer Mini:</strong> Plays MP3 audio alerts from a microSD card.</li>
+    <li><strong>Arduino UNO:</strong> Classic prototyping board for sensor integration.</li>
+    <li><strong>WS2812 RGB LED Ring:</strong> Programmable LEDs that show air quality levels in real time.</li>
+    <li><strong>MQ-135 Gas Sensor:</strong> Detects multiple harmful gases, calibrated for indoor and outdoor use.</li>
+  </ul>
+  <img src="materials.jpg" alt="Project materials overview" class="small-img">
+</section>
+
+<section>
+  <h2>Global Impact</h2>
+  <p>
+    Air pollution is one of the biggest threats to health worldwide. By monitoring and sharing data,
+    our project contributes to cleaner cities and healthier lives.
+  </p>
+  <img src="earth-impact.jpg" alt="Earth environmental impact">
+</section>
+
+<section>
+  <h2>Future Vision</h2>
+  <p>
+    Kaga Air Monitoring aims to expand into smart city networks, integrate with mobile apps, and
+    provide real-time dashboards for governments and citizens.
+  </p>
+  <img src="future.jpg" alt="Future smart city vision">
+</section>
+
+<p style="text-align:center;">
+  <a class="btn" href="index.html">⬅ Back to Home</a>
+</p>
+
+<section id="team" class="team">
+  <h2>👨‍💻 The Kaga Team</h2>
+  <p>Developed and maintained by <strong>The Kaga Team</strong></p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>📩 Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p style="margin-top:15px;">
+    📧 Email: <a href="mailto:kagaairmonitoring@gmail.com">kagaairmonitoring@gmail.com</a>
+  </p>
+</section>
+
+<footer>
+  © 2025 Kaga Air Monitoring • Designed with ❤️ by The Kaga Team
+</footer>
+
+</body>
+</html>
+
